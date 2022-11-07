@@ -10,7 +10,9 @@ int _printf(const char *format, ...);
  * @c: char
  * @f: function
  */
-
+int print_char(va_list c);
+int print_modulo(va_list m);
+int print_string(va_list str);
 typedef struct printf
 {
 	char *c;
