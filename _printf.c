@@ -1,5 +1,5 @@
 #include "_putchar.c"
-#include <stdarg.c>
+#include <stdarg.h>
 
 /**
  * _printf - function that print
