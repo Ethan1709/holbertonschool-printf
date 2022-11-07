@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -10,6 +10,6 @@
 
 int print_char(va_list c)
 {
-	_putchar(va_arg(c, char));
+	_putchar(va_arg(c, int));
 	return (0);
 }

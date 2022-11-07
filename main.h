@@ -2,7 +2,6 @@
 #define _MAIN_H
 #include <stdio.h>
 #include <stdarg.h>
-#include <_putchar.c>
 
 int _printf(const char *format, ...);
 /**
@@ -13,10 +12,12 @@ int _printf(const char *format, ...);
 int print_char(va_list c);
 int print_modulo(va_list m);
 int print_string(va_list str);
+int _putchar(char c);
 typedef struct printf
 {
 	char *c;
 	int (*f)(va_list args);
 } print_f;
+
 #endif
 
