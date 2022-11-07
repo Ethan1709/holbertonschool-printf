@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "_putchar.c"
 #include <stdarg.h>
 =======
 #include <stdarg.h>
 #include "main.h"
 >>>>>>> refs/remotes/origin/master
+=======
+#include <stdarg.h>
+#include "main.h"
+>>>>>>> 4a141794ab0ecfe0dd5328489a2832da3b60abf8
 
 /**
  * _printf - function that print
