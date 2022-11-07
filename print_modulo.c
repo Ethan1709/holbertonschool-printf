@@ -8,8 +8,8 @@
  * Return: 0
  */
 
-int print_char(va_list m)
+int print_modulo(va_list m)
 {
-	_putchar(va_arg(m, char));
+	_putchar(va_arg(m, int));
 	return (0);
 }

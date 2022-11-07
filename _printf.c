@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #include "_putchar.c"
 #include <stdarg.h>
+=======
+#include <stdarg.h>
+#include "main.h"
+>>>>>>> refs/remotes/origin/master
 
 /**
  * _printf - function that print
@@ -21,13 +26,13 @@ int _printf(const char *format, ...)
 	char *d = "";
 
 	va_start(args, format);
-	while (format != NULL && format[i] '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		while (chars[j].c != NULL && format[i] != *(chars[j].c))
 			j++;
 		if (chars[j].c != NULL)
 		{
-			_putchar(d);
+			_putchar(*d);
 			chars[j].f(args);
 		}
 		i++;
@@ -35,4 +40,5 @@ int _printf(const char *format, ...)
 	}
 	_putchar('\n');
 	va_end(args);
+	return (0);
 }
