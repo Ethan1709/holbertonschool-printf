@@ -1,6 +1,6 @@
-#include <main.h>
+#include "main.h"
 #include <stdio.h>
-#include <stdarg.>
+#include <stdarg.h>
 
 /**
  * print_string - prints string
@@ -11,7 +11,7 @@
 
 int print_string(va_list str)
 {
-	_putchar(va_arg(str, char));
+	_putchar(va_arg(str, int));
 
 	return (0);
 }
