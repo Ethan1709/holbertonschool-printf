@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 	int (*k)(va_list);
 	int len;
 	va_list args;
-	
+
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
@@ -50,8 +50,6 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (i = (len - 1) && format[i] == " ")
-				break;
 			_putchar(format[i]);
 			len++;
 		}
