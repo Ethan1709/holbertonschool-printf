@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#include "_putchar.c"
-#include <stdarg.h>
-=======
 #include <stdarg.h>
 #include "main.h"
->>>>>>> refs/remotes/origin/master
-=======
-#include <stdarg.h>
-#include "main.h"
->>>>>>> 4a141794ab0ecfe0dd5328489a2832da3b60abf8
 
 /**
  * _printf - function that print
@@ -17,24 +7,39 @@
  *
  * Return: 0 if succeed
  */
-int _printf(const char *format, ...)
-{
+static int (*print_format (const char *format))(va_list)
+{	
+	int y = 0;
+
 	print_f chars[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_modulo},
 		{NULL, NULL},
 	};
+
+	for (; (chars[y]).c != NULL; y++)
+	{
+		if (*(chars[y].c) = *format)
+			break;
+	}
+	return (chars[y].f);
+}
+
+
+int _printf(const char *format, ...)
+{
 	int i = 0;
 	int j = 0;
 	va_list args;
-	char *d = "";
+	char *d = "s";
 
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		while (chars[j].c != NULL && format[i] != *(chars[j].c))
 			j++;
+
 		if (chars[j].c != NULL)
 		{
 			_putchar(*d);

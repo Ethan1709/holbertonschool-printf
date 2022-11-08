@@ -16,7 +16,7 @@ int _putchar(char c);
 typedef struct printf
 {
 	char *c;
-	int (*f)(va_list args);
+	int (*f)(va_list);
 } print_f;
 
 #endif

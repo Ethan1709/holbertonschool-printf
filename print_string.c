@@ -11,7 +11,14 @@
 
 int print_string(va_list str)
 {
-	_putchar(va_arg(str, int));
+	char *string = va_arg(str, char*);
+	int i = 0;
 
-	return (0);
+	if (string == NULL)
+		string = "(null)";
+
+	while (string[i])
+		_putchar(string[i++]);
+
+	return (i);
 }
