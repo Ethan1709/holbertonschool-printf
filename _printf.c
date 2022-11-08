@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				_putchar(format[i]);
-				return (1);
+				return (0);
 			}
 		}
 		else
