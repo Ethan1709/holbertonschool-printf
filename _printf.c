@@ -50,14 +50,13 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				_putchar(format[i]);
-				_putchar('\n');
-				return (1);
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
 			len++;
+			return (1);
 		}
 	}
 	va_end(args);
