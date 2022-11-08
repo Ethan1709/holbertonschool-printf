@@ -10,27 +10,27 @@
 
 static int (*print_format(const char *format, ...))(va_list)
 {
-        int y = 0;
+	int y = 0;
 
-        print_f chars[] = {
-                {"c", print_char},
-                {"s", print_string},
-                {NULL, NULL},
-        };
+	print_f chars[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{NULL, NULL},
+	};
 
-        for (; chars[y].c != NULL; y++)
-        {
-                if (*(chars[y].c) == *format)
-                        break;
-        }
-        return (*(chars[y].f));
+	for (; chars[y].c != NULL; y++)
+	{
+		if (*(chars[y].c) == *format)
+			break;
+       	}	
+	return (*(chars[y].f));
 }
 int _printf(const char *format, ...)
 {
 	int i;
 	int (*k)(va_list);
 	int len;
-        va_list args;
+	va_list args;
 	
 	if (format == NULL)
 		return (-1);
@@ -42,22 +42,15 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			k = print_format(&format[i + 1]);
+			k = print_format(&format[i + 2]);
 			if (k != NULL)
 				len += k(args);
-	/*	{
-			for (j = 0; chars[j].c != NULL; j++)
-			{
-				if (*chars[j].c == k)
-					len += _putchar(format[i]);
-			}
-		} */
 		}
 		else
 		{
 			_putchar(format[i]);
 			len++;
-	}
+		}
 	}
 	va_end(args);
 	return (len);
