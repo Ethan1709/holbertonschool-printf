@@ -50,10 +50,12 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (i = (len - 1) && format[i] = " ")
+				break;
 			_putchar(format[i]);
 			len++;
 		}
 	}
 	va_end(args);
-	return (len - 1);
+	return (len);
 }
