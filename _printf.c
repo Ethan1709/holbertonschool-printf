@@ -25,6 +25,7 @@ static int (*print_format(const char *format, ...))(va_list)
        	}	
 	return (*(chars[y].f));
 }
+
 int _printf(const char *format, ...)
 {
 	int i;
@@ -39,6 +40,7 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
+			i = i + 1;
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
@@ -48,7 +50,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i +1]);
+			_putchar(format[i]);
 			len++;
 		}
 	}
