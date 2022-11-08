@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 				len += k(args);
 			i = i + 1;
 			if (format[i] == '%')
-				_putchar(i);
+				_putchar(format[i]);
 		}
 		else
 		{
