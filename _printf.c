@@ -7,48 +7,58 @@
  *
  * Return: 0 if succeed
  */
-static int (*print_format (const char *format))(va_list)
-{	
-	int y = 0;
 
-	print_f chars[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_modulo},
-		{NULL, NULL},
-	};
+static int (*print_format(const char *format, ...))(va_list)
+{
+        int y = 0;
 
-	for (; (chars[y]).c != NULL; y++)
-	{
-		if (*(chars[y].c) = *format)
-			break;
-	}
-	return (chars[y].f);
+        print_f chars[] = {
+                {"c", print_char},
+                {"s", print_string},
+                {NULL, NULL},
+        };
+
+        for (; chars[y].c != NULL; y++)
+        {
+                if (*(chars[y].c) == *format)
+                        break;
+        }
+        return (*(chars[y].f));
 }
-
-
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int j = 0;
-	va_list args;
-	char *d = "s";
-
+	int i;
+	int (*k)(va_list);
+	int len;
+        va_list args;
+	
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
-	while (format != NULL && format[i] != '\0')
-	{
-		while (chars[j].c != NULL && format[i] != *(chars[j].c))
-			j++;
 
-		if (chars[j].c != NULL)
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
 		{
-			_putchar(*d);
-			chars[j].f(args);
+			if (format[i + 1] == '\0')
+				return (-1);
+			k = print_format(&format[i + 1]);
+			if (k != NULL)
+				len += k(args);
+	/*	{
+			for (j = 0; chars[j].c != NULL; j++)
+			{
+				if (*chars[j].c == k)
+					len += _putchar(format[i]);
+			}
+		} */
 		}
-		i++;
-		j = 0;
+		else
+		{
+			_putchar(format[i]);
+			len++;
 	}
-	_putchar('\n');
+	}
 	va_end(args);
-	return (0);
+	return (len);
 }
