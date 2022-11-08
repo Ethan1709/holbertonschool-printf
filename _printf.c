@@ -48,7 +48,10 @@ int _printf(const char *format, ...)
 				len += k(args);
 			i = i + 1;
 			if (format[i] == '%')
+			{
 				_putchar(format[i]);
+				return (1);
+			}
 		}
 		else
 		{
