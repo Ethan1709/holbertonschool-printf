@@ -42,13 +42,13 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			k = print_format(&format[i + 2]);
+			k = print_format(&format[i + 1]);
 			if (k != NULL)
 				len += k(args);
 		}
 		else
 		{
-			_putchar(format[i]);
+			_putchar(format[i +1]);
 			len++;
 		}
 	}
