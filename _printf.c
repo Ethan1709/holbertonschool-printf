@@ -52,10 +52,11 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				len += 1;
 			}
-			if (format[i] != print_format)
+			if (k != print_format(&format[i]))
 			{
 				_putchar(format[i] && format[i - 1]);
 				len += 2;
+			}
 		}
 		else
 		{
