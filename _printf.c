@@ -51,12 +51,12 @@ int _printf(const char *format, ...)
 			{
 				_putchar(format[i]);
 			}
+			return (1);
 		}
 		else
 		{
 			_putchar(format[i]);
 			len++;
-			return (1);
 		}
 	}
 	va_end(args);
