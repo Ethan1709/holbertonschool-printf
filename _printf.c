@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (i = (len - 1) && format[i] = " ")
+			if (i = (len - 1) && format[i] == " ")
 				break;
 			_putchar(format[i]);
 			len++;
