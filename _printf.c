@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 			{
 				_putchar(format[i]);
 			}
-			return (1);
+			return (0);
 		}
 		else
 		{
