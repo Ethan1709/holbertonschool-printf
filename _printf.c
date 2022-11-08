@@ -54,7 +54,7 @@ int _printf(const char *format, ...)
 			}
 			if (k != print_format(&format[i]))
 			{
-				_putchar(format[i] && format[i - 1]);
+				_putchar(format[i]);
 				len += 2;
 			}
 		}
