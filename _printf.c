@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * _printf - function that print
- * format: any argument
+ * print_format - structure of characters
+ * @format: any argument
  *
- * Return: 0 if succeed
+ * Return: the right function
  */
 
 static int (*print_format(const char *format, ...))(va_list)
@@ -22,9 +22,15 @@ static int (*print_format(const char *format, ...))(va_list)
 	{
 		if (*(chars[y].c) == *format)
 			break;
-       	}	
+	}
 	return (*(chars[y].f));
 }
+
+/**
+ * _print - main function 
+ * @format: the characters entered by the user
+ * Return: the good output of the function
+ */
 
 int _printf(const char *format, ...)
 {
@@ -46,7 +52,7 @@ int _printf(const char *format, ...)
 			k = print_format(&format[i + 1]);
 			if (k != NULL)
 				len += k(args);
-			if (k == NULL && format[i + 1] != '%' )
+			if (k == NULL && format[i + 1] != '%')
 			{
 				_putchar(format[i]);
 				_putchar (format[i + 1]);
