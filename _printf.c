@@ -15,6 +15,8 @@ static int (*print_format(const char *format, ...))(va_list)
 	print_f chars[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"d", print_digit},
+		{"i", print_digit},
 		{NULL, NULL},
 	};
 

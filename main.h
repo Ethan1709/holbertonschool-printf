@@ -12,6 +12,7 @@ int _printf(const char *format, ...);
  */
 int print_char(va_list c);
 int print_string(va_list str);
+int print_digit(va_list dgt);
 int _putchar(char c);
 typedef struct printf
 {
