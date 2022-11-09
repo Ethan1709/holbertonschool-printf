@@ -27,7 +27,7 @@ static int (*print_format(const char *format, ...))(va_list)
 }
 
 /**
- * _print - main function 
+ * _printf - main function 
  * @format: the characters entered by the user
  * Return: the good output of the function
  */
