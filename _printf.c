@@ -46,14 +46,14 @@ int _printf(const char *format, ...)
 			k = print_format(&format[i + 1]);
 			if (k != NULL)
 				len += k(args);
-			if (k == NULL)
+			if (k == NULL && format[i] != '%' )
 			{
 				_putchar(format[i]);
 				_putchar (format[i + 1]);
 				len += 2;
 			}
 			i = i + 1;
-			else if (format[i] == '%')
+			if (format[i] == '%')
 			{
 				_putchar(format[i]);
 				len += 1;
