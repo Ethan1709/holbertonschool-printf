@@ -9,11 +9,10 @@
 
 int print_digit (va_list dgt)
 {
-	int i = 0;
 	int len = 0;
-	int div = 1, res;
 	int num = va_arg(dgt, int);
-	int tmp, m;
+	int div  = 1;
+	int res;
 
 	if (num < 0)
 	{
@@ -25,23 +24,14 @@ int print_digit (va_list dgt)
 		_putchar(num);
 		len += 1;
 	}
-	while (num > 9)
-	{
+	if (num > 9)
 		res = num / div;
-		while (res > 9)
-		{
-			div *= 10;
-			i++;
-		}
-		_putchar(res);
-		len += 1;
+	do
+	{
+		div *= 10;
+	} while (res > 9);
+	_putchar(res);
 
-		for (; i > 0; i--)
-		{
-			m = res * div;
-			tmp = (num - m) / (div / (10 * i));
-			_putchar(tmp);
-		}
-	}
+
 	return (len);
 }
