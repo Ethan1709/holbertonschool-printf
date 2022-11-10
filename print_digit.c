@@ -10,9 +10,9 @@
 int print_digit (va_list dgt)
 {
 	int len = 0;
-	int num = va_arg(dgt, int);
-	int  div = 1;
-	int tmp;
+	long int num = va_arg(dgt, int);
+	int div = 1;
+	long int tmp;
 	int res1;
 	int i;
 
