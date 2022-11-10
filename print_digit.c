@@ -18,7 +18,7 @@ int print_digit (va_list dgt)
 
 	if (num < 0)
 	{
-		_putchar('-');
+		len += _putchar('-');
 		num = -num;
 	}
 	if (num <= 9)
@@ -36,7 +36,7 @@ int print_digit (va_list dgt)
 			div = div * 10;
 			i++;
 		}
-		_putchar('0' + tmp);
+		len += _putchar('0' + tmp);
 		while ((num %= div) > 0)
 		{
 			len +=  _putchar('0' + (num * 10 / div));
