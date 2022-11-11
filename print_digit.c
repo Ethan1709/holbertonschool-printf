@@ -11,36 +11,38 @@ int print_digit (va_list dgt)
 {
 	long int len = 0;
 	long int num = va_arg(dgt, int);
-	long int div = 1;
+	long int div;
 	long int tmp;
-	long int res1;
-	int i;
+	long int num1;
+	
 
 	if (num < 0)
 	{
-		len += _putchar('-');
+		len = len + 1;
+		_putchar('-');
 		num = -num;
 	}
 	if (num <= 9)
 	{
-		len += _putchar('0' + num);
+		len = len + 1;
+		_putchar('0' + num);
 	}
-	if (num > 9)
+	while (num > 9)
 	{	
 		tmp = num;
-		while (tmp > 9)
+		div = 1;
+		while ((tmp / div) > 9)
 		{
-			res1 = tmp / div;
-			tmp = res1;
 			div = div * 10;
-			i++;
 		}
-		len += _putchar('0' + tmp);
-		while ((num %= div) > 0)
-		{
-			len +=  _putchar('0' + (num * 10 / div));
-			div /= 10;
-		}
+		tmp = tmp / div;
+		len = len + 1;
+		_putchar('0' + tmp);
+		num = num - (tmp * div);
+		if (num <= 9)
+			num1 = num;
 	}
+	_putchar('0' + num1);
+	len = len + 1;
 	return (len);
 }
