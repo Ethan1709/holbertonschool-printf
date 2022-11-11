@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_digit - function that print a digit
  * @dgt: entry point : a digit
