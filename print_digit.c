@@ -11,7 +11,7 @@ int print_digit (va_list dgt)
 {
 	long int len = 0;
 	long int num = va_arg(dgt, int);
-	long int  div = 1;
+	long int div = 1;
 	long int tmp;
 	long int res1;
 	long int i;
