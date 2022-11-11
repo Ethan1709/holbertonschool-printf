@@ -9,7 +9,7 @@
 
 int print_digit (va_list dgt)
 {
-	int len = 0;
+	long int len = 0;
 	long int num = va_arg(dgt, int);
 	long int div = 1;
 	long int tmp;
