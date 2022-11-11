@@ -36,7 +36,7 @@ int print_digit (va_list dgt)
 			div = div * 10;
 			i++;
 		}
-		len += _putchar('0' + tmp);
+	/*	len += _putchar('0' + tmp);*/
 		while ((num %= div) > 0)
 		{
 			len +=  _putchar('0' + (num * 10 / div));
