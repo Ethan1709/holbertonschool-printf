@@ -9,12 +9,12 @@
 
 int print_digit (va_list dgt)
 {
-	long int len = 0;
-	long int num = va_arg(dgt, int);
-	long int div = 1;
-	long int tmp;
-	long int res1;
-	long int i;
+	int len = 0;
+	int num = va_arg(dgt, int);
+	int div = 1;
+	int tmp;
+	int res1;
+	int i;
 
 	if (num < 0)
 	{
@@ -23,8 +23,7 @@ int print_digit (va_list dgt)
 	}
 	if (num <= 9)
 	{
-		_putchar(num);
-		len += 1;
+		len += _putchar('0' + num);
 	}
 	if (num > 9)
 	{	
