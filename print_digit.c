@@ -10,7 +10,7 @@
 int print_digit (va_list dgt)
 {
 	int len = 0;
-	int num = va_arg(dgt, int);
+	long int num = va_arg(dgt, int);
 	int div = 1;
 	int tmp;
 	int res1;
