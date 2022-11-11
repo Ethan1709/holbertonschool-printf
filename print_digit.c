@@ -14,7 +14,6 @@ int print_digit (va_list dgt)
 	long int div = 1;
 	long int tmp;
 	long int res1;
-	int i;
 
 	if (num < 0)
 	{
@@ -33,7 +32,6 @@ int print_digit (va_list dgt)
 			res1 = tmp / div;
 			tmp = res1;
 			div = div * 10;
-			i++;
 		}
 		len += _putchar('0' + tmp);
 		while ((num %= div) > 0)
