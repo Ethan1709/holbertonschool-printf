@@ -69,6 +69,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 
 # FLOWCHART
+![code2flow_Usp8gX](https://user-images.githubusercontent.com/113636658/201380796-fadf8b8f-daa3-4998-a33b-c5e3b4ded79e.png)
 
 
 
