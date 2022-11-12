@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * recursive_print - function that prints a digit
@@ -11,9 +12,9 @@ int recursive_print (int num)
 {
 	long int tmp = num;
 
-	if (num == -2147483647)
+	if (num == INT_MIN)
 	{
-		num = 2147483647;
+		num = INT_MAX;
 		_putchar('-');
 	}
 	if (num < 0)
