@@ -11,11 +11,12 @@
 int recursive_print (int num)
 {
 	long int tmp = num;
-
+/*
 	if (num == INT_MIN)
 	{
-		num = ((INT_MAX * (-1)) - 1);
-	}
+		num = INT_MAX;
+		_putchar('-');
+	}*/
 	if (num < 0)
 	{
 		_putchar('-');
