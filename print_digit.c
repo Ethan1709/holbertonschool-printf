@@ -52,12 +52,15 @@ int print_digit(va_list dgt)
 	long int num = va_arg(dgt, int);
 
 	recursive_print(num);
+	if (num == INT_MIN)
+	{
+		num = -num;
+		len++;
+	}
 	if (num < 0)
 	{
-		num = num + 1;
 		len++;
 		num = -num;
-		num = num + 1;
 	}
 	if (num == 0)
 		len = 1;
