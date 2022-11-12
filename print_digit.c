@@ -15,7 +15,6 @@ int recursive_print (int num)
 	if (num == INT_MIN)
 	{
 		num = ((INT_MAX * (-1)) - 1);
-		_putchar('-');
 	}
 	if (num < 0)
 	{
