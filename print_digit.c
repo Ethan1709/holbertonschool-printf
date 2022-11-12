@@ -41,8 +41,8 @@ int recursive_print (int num)
 
 int print_digit(va_list dgt)
 {
-	int len = 0;
-	int div = 1;
+	long int len = 0;
+	long int div = 1;
 	long int num = va_arg(dgt, int);
 
 	recursive_print(num);
