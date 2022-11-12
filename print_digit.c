@@ -51,13 +51,14 @@ int print_digit(va_list dgt)
 		len++;
 		num = -num;
 	}
+	if (num == 0)
+		len = 2;
 
 	while ((num / div) > 0)
 	{
 		div = div * 10;
 		len++;
 	}
-	len = len * 2;
 	return (len);
 }
 
