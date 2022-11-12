@@ -17,7 +17,7 @@ int recursive_print (int num)
 		num = INT_MAX;
 		_putchar('-');
 	}*/
-	if (num < 0)
+	for (; num < 0;)
 	{
 		if (num == INT_MIN)
 			break;
