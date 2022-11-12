@@ -73,7 +73,17 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 
 
+### Testings
 
+*We worked with my partner a lot on the whiteboard to clarify step by step the code in our head.
+we wrote sudocode on it,  so it's easier to have an idea where to go. 
+Then, we used Python Tutor to see where our code was broken when we didn't know at first sight.
+We also compiled locally our code to see if we got the same output as the exemples in the project.*
+
+
+## Authors
+
+***Ethan Benyayer and Simon Richard***
 
 
 
