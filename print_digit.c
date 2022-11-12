@@ -4,87 +4,39 @@
  * print_digit - function that print a digit
  * @dgt: entry point : a digit
  *
- * Return: i the length
+ * Return: len the length
  */
 
-int print_digit (va_list dgt)
+int print_digit(va_list dgt)
 {
 	long int len = 0;
 	long int num = va_arg(dgt, int);
-	long int div;
-	long int tmp;
-	long int num1;
+	long int div = 1;
+	long int tmp = num / div;
 
-
-	if (num < 0)
+	if (num < 0) /*check if negative*/
 	{
-		len = len + 1;
+		len = len + 2;
 		_putchar('-');
 		num = -num;
+		tmp = -tmp;
 	}
-	if (num <= 9)
+	if (num == 0) /*check if null*/
 	{
 		len = len + 1;
 		_putchar('0' + num);
 	}
-	while (num > 9)
-        {
-		tmp = num;
-		div = 1;
-		while ((tmp / div) > 9)
-		{
-			div = div * 10;
-		}
-		tmp = tmp / div;
-		len = len + 1;
-		_putchar('0' + tmp);
-		num = num - (tmp * div);
-		if (num <= 9)
-			num1 = num;
-	}
-	_putchar('0' + num1);
-	len = len + 1;
-	return (len);
-}
-
-/*
-int recursive_print (int num)
-{
-	long int len = 0;
-	long int tmp = num;
-
-	if (num < 0)
+	while (tmp > 9) /*loop to count length*/
 	{
-		_putchar('-');
-		num = -num;
-		len ++;
-	}
-
-	if (num == 0)
-	{
-		_putchar('0');
-		len ++;
-	}
-
-	while (tmp != 0)
-	{
-		tmp = tmp / 10;
+		div = div * 10;
 		len++;
 	}
-
-	if (num/10)
+	for (; div != 0 ;) /*loop to print*/
 	{
-		recursive_print(num/10);
+		tmp = num / div;
+		_putchar('0' + tmp);
+		num = num % div;
+		div = div / 10;
 	}
-	_putchar(num%10 + '0');
 	return (len);
 }
-
-int print_digit (va_list dgt)
-{
-	long int num = va_arg(dgt, int);
-
-	recursive_print (num);
-	return (1);
-}
-*/
