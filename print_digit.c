@@ -5,18 +5,13 @@
  * recursive_print - function that prints a digit
  * @num: entry point : a digit
  *
- * Return: Always 1.
+ * Return: Always 1
  */
 
 int recursive_print (int num)
 {
 	long int tmp = num;
 
-/*	if (num == INT_MIN)
-	{
-		num = INT_MAX;
-		_putchar('-');
-	}*/
 	for (; num < 0;)
 	{
 		if (num == INT_MIN)
@@ -35,7 +30,10 @@ int recursive_print (int num)
 		recursive_print(num / 10);
 
 	}
-	_putchar(num % 10 + '0');
+	if (num % 10 + '0' != '(')
+		_putchar(num % 10 + '0');
+	else 
+		_putchar('8');
 	return (1);
 }
 
@@ -70,4 +68,3 @@ int print_digit(va_list dgt)
 	}
 	return (len);
 }
-
