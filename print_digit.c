@@ -12,7 +12,7 @@ int recursive_print (int num)
 {
 	long int tmp = num;
 
-	if (num = INT_MIN)
+	if (num == INT_MIN)
 		num = -num;
 	if (num < 0)
 	{
