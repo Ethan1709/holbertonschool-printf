@@ -10,7 +10,7 @@
 
 int recursive_print (int num)
 {
-	long long int tmp = num;
+	long int tmp = num;
 
 	if (num == INT_MIN)
 	{
@@ -47,9 +47,9 @@ int recursive_print (int num)
 
 int print_digit(va_list dgt)
 {
-	long long int len = 0;
-	long long int div = 1;
-	long long int num = va_arg(dgt, int);
+	long int len = 0;
+	long int div = 1;
+	long int num = va_arg(dgt, int);
 
 	recursive_print(num);
 
