@@ -1,42 +1,67 @@
 #include "main.h"
 
 /**
- * print_digit - function that print a digit
- * @dgt: entry point : a digit
+ * recursive_print - function that prints a digit
+ * @num: entry point : a digit
  *
- * Return: len the length
+ * Return: Always 1.
  */
+
+int recursive_print (int num)
+{
+	long int tmp = num;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
+
+	if (num == 0)
+	{
+		_putchar('0');
+	}
+
+	while (tmp != 0)
+	{
+		tmp = tmp / 10;
+	}
+
+	if (num / 10)
+	{
+		recursive_print(num / 10);
+
+	}
+	_putchar(num % 10 + '0');
+	return (1);
+}
+
+/**
+ * print_digit - function that calls another & returns len
+ * @dgt: entry point for a number value
+ *
+ * Return: lenght
+ */
+
 
 int print_digit(va_list dgt)
 {
-	long int len = 0;
+	int len = 0;
+	int div = 1;
 	long int num = va_arg(dgt, int);
-	long int div = 1;
-	long int tmp = num / div;
 
-	if (num < 0) /*check if negative*/
+	recursive_print(num);
+	if (num < 0)
 	{
-		len = len + 2;
-		_putchar('-');
+		len++;
 		num = -num;
-		tmp = -tmp;
 	}
-	if (num == 0) /*check if null*/
-	{
-		len = len + 1;
-		_putchar('0' + num);
-	}
-	while (tmp > 9) /*loop to count length*/
+
+	while ((num / div) > 0)
 	{
 		div = div * 10;
 		len++;
 	}
-	for (; div != 0 ;) /*loop to print*/
-	{
-		tmp = num / div;
-		_putchar('0' + tmp);
-		num = num % div;
-		div = div / 10;
-	}
-	return (len);
+	return (len + 1);
 }
+
