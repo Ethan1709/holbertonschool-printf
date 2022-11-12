@@ -54,8 +54,10 @@ int print_digit(va_list dgt)
 	recursive_print(num);
 	if (num < 0)
 	{
+		num = num + 1;
 		len++;
 		num = -num;
+		num = num + 1;
 	}
 	if (num == 0)
 		len = 1;
