@@ -17,11 +17,6 @@ int recursive_print (int num)
 		num = -num;
 	}
 
-	if (num == 0)
-	{
-		_putchar('0');
-	}
-
 	while (tmp != 0)
 	{
 		tmp = tmp / 10;
