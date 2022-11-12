@@ -21,7 +21,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## Examples
 
-***I will show you some examples using the function***
+***We will show you some examples using the function***
 
 1. - Input: "Let's print a simple sentence.\n"
 
