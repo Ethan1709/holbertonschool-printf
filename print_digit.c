@@ -48,39 +48,42 @@ int print_digit (va_list dgt)
 }
 */
 
-void recursive_print (long int num)
+int recursive_print (int num)
 {
-	int len = 0;
+	long int len = 0;
+	long int tmp = num;
 
 	if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
-		len += 1;
+		len ++;
 	}
 
 	if (num == 0)
 	{
 		_putchar('0');
-		len += 1;
+		len ++;
+	}
+
+	while (tmp != 0)
+	{
+		tmp = tmp / 10;
+		len++;
 	}
 
 	if (num/10)
+	{
 		recursive_print(num/10);
-
+	}
 	_putchar(num%10 + '0');
-	len += 1;
+	return (len);
 }
 
 int print_digit (va_list dgt)
 {
-	int len = 0;
 	long int num = va_arg(dgt, int);
 
-	recursive_print(num);
-
-	return (len);
+	recursive_print (num);
+	return (1);
 }
-
-
-
