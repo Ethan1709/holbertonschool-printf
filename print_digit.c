@@ -62,6 +62,7 @@ int print_digit(va_list dgt)
 		div = div * 10;
 		len++;
 	}
-	return (len + 1);
+	len = len * 2;
+	return (len);
 }
 
