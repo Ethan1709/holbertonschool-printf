@@ -1,6 +1,6 @@
 # Title of the project: Printf
 
-*My firt group project*
+*My first group project*
 
 ## Description of the printf project:
 
@@ -13,11 +13,11 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 #### Requirements
 
 - Files are compiled on Ubuntu 20.04 LTS, using gcc
-- My code is using the Betty style. It's the style required by Holberton School in C
+- Our code is using the Betty style. It's the style required by Holberton School in C
 - Not using global variables
 - No more than 5 functions per files
 - All my prototypes are included in the header file called ***main.h***
-- All our code is pushed and validated on github using git add, git command -m, and git push
+- All our code is pushed and validated on github using git add, git commit -m, and git push
 
 ## Exemples
 
@@ -75,8 +75,8 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ### Testings
 
-*We worked with my partner a lot on the whiteboard to clarify step by step the code in our head.
-we wrote sudocode on it,  so it's easier to have an idea where to go. 
+*We worked together a lot on the whiteboard to clarify step by step the code in our head.
+We wrote sudocode on it,  so it's easier to have an idea where to go. 
 Then, we used Python Tutor to see where our code was broken when we didn't know at first sight.
 We also compiled locally our code to see if we got the same output as the exemples in the project.*
 
