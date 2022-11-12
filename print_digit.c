@@ -32,7 +32,7 @@ int recursive_print (int num)
 	}
 	if (num % 10 + '0' != '(')
 		_putchar(num % 10 + '0');
-	else 
+	else
 		_putchar('8');
 	return (1);
 }
