@@ -19,9 +19,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 - All my prototypes are included in the header file called ***main.h***
 - All our code is pushed and validated on github using git add, git commit -m, and git push
 
-## Exemples
+## Examples
 
-***I will show you some exemples using the function***
+***I will show you some examples using the function***
 
 1. - Input: "Let's print a simple sentence.\n"
 
@@ -64,7 +64,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 *Here we can see thet the function handled the number conversion as in printf using the macro %d*
 
-**I won't put an exemple for the macro %i because it's the exact same output as %d**
+**I won't put an example for the macro %i because it's the exact same output as %d**
 
 
 
@@ -78,12 +78,12 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 *We worked together a lot on the whiteboard to clarify step by step the code in our head.
 We wrote sudocode on it,  so it's easier to have an idea where to go. 
 Then, we used Python Tutor to see where our code was broken when we didn't know at first sight.
-We also compiled locally our code to see if we got the same output as the exemples in the project.*
+We also compiled locally our code to see if we got the same output as the examples in the project.*
 
 
 ## Authors
 
-***Ethan Benyayer and Simon Richard***
+***Ethan Benyayer & Simon Richard***
 
 
 

@@ -1,0 +1,29 @@
+.TH _PRINTF "V1"
+.SH NAME
+_printf \- printf
+.SH SYNOPSYS
+_printf FORMAT [ARGUMENT] ...
+.SH DESCRIPTION
+Print ARGUMENT(S) according to FORMAT
+.SH OPTION
+There is no option
+.TP
+\fB-%c\fP
+%c: Print a single character.
+.TP
+\fB-%s\fP
+%s: Print a string.
+.TP
+\fB-%%\fP
+%%: Print a percent sign.
+.TP
+\fB-%d\fP
+%d: Print a decimal number.
+.TP
+\fB-%i\fP
+%i: Print an integer.
+.SH EXAMPLE
+ _printf("String:[%s]\n", "I am a string !")
+Output: String:[I am a string !]
+SH AUTHOR
+Ethan Benyayer & Simon Richard
