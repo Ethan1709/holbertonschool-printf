@@ -52,7 +52,7 @@ int print_digit(va_list dgt)
 		num = -num;
 	}
 	if (num == 0)
-		len = 2;
+		len = 1;
 
 	while ((num / div) > 0)
 	{
