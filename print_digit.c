@@ -6,7 +6,7 @@
  *
  * Return: i the length
  */
-/*
+
 int print_digit (va_list dgt)
 {
 	long int len = 0;
@@ -46,8 +46,8 @@ int print_digit (va_list dgt)
 	len = len + 1;
 	return (len);
 }
-*/
 
+/*
 int recursive_print (int num)
 {
 	long int len = 0;
@@ -87,3 +87,4 @@ int print_digit (va_list dgt)
 	recursive_print (num);
 	return (1);
 }
+*/
