@@ -10,19 +10,12 @@
 
 int recursive_print (int num)
 {
-	long int tmp = num;
-
 	for (; num < 0;)
 	{
 		if (num == INT_MIN)
 			break;
 		_putchar('-');
 		num = -num;
-	}
-
-	while (tmp != 0)
-	{
-		tmp = tmp / 10;
 	}
 
 	if (num / 10)
